@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'FabLab-Front';
+signIn() {
+throw new Error('Method not implemented.');
+}
+signUp() {
+throw new Error('Method not implemented.');
+}
+  title = 'FabLab';
 }
