@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { EquipmentCardComponent } from './equipment-card/equipment-card.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { NewReservationPageComponent } from './new-reservation-page/new-reservation-page.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NewReservationPageComponent } from './new-reservation-page/new-reservat
     FooterComponent,
     EquipmentCardComponent,
     ProjectCardComponent,
-    NewReservationPageComponent
+    NewReservationPageComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
