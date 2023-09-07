@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { EquipmentCardComponent } from './equipment-card/equipment-card.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { NewReservationPageComponent } from './new-reservation-page/new-reservation-page.component';
+import { MemberTemplateComponent } from './member-template/member-template.component';
+import { MemberReservationComponent } from './member-reservation/member-reservation.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { NewReservationPageComponent } from './new-reservation-page/new-reservat
     FooterComponent,
     EquipmentCardComponent,
     ProjectCardComponent,
-    NewReservationPageComponent
+    NewReservationPageComponent,
+    MemberTemplateComponent,
+    MemberReservationComponent
   ],
   imports: [
     BrowserModule,

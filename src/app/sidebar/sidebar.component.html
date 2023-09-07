@@ -1,98 +1,62 @@
-<section id="sidebar" class="fixed top-0 left-0 w-60 h-screen bg-light z-20 transition duration-300 ease overflow-x-hidden scrollbar-none">
+<section class="fixed top-0 left-0 w-60 h-screen bg-light z-20 transition duration-300 ease overflow-x-hidden scrollbar-none"
+         id="sidebar">
   <div class="logo">
-    <img src="assets/image/logo.png" alt="easyclass" class="w-12 mr-1/4" />
+    <img alt="easyclass" class="w-12 mr-1/4" src="assets/image/logo.png"/>
     <h4 class="w-7 h-5 text-18 flex-shrink-0 mt-neg-15 text-white">FabLab Solidaire</h4>
   </div>
   <ul class="side-menu top mt-12">
     <li [class.active]="activeIndex === 0">
-      <a routerLink="/dashboard" (click)="setActiveIndex(0)" class="flex items-center border-radius-48 font-16 text-dark bg-light h-12">
+      <a (click)="setActiveIndex(0)" class="flex items-center border-radius-48 font-16 text-dark bg-light h-12"
+         routerLink="/dashboard">
         <i class='bx bxs-dashboard min-w-60 flex justify-center'></i>
         <span class="text">Dashboard</span>
       </a>
     </li>
     <li [class.active]="activeIndex === 1">
-      <a routerLink="/projects" (click)="setActiveIndex(1)" class="flex items-center border-radius-48 font-16 text-dark bg-light h-12">
+      <a (click)="setActiveIndex(1)" class="flex items-center border-radius-48 font-16 text-dark bg-light h-12"
+         routerLink="/projects">
         <i class='bx bxs-shopping-bag-alt min-w-60 flex justify-center'></i>
         <span class="text">Projects</span>
       </a>
     </li>
     <li [class.active]="activeIndex === 2">
-      <a routerLink="/equipments" (click)="setActiveIndex(2)" class="flex items-center border-radius-48 font-16 text-dark bg-light h-12">
+      <a (click)="setActiveIndex(2)" class="flex items-center border-radius-48 font-16 text-dark bg-light h-12"
+         routerLink="/equipments">
         <i class='bx bxs-doughnut-chart min-w-60 flex justify-center'></i>
         <span class="text">Equipements</span>
       </a>
     </li>
- 
-  <li [class.active]="activeIndex === 3" class="flex items-center border-radius-48 font-16 text-dark bg-light h-12">
-    <a routerLink="/reservations" (click)="setActiveIndex(3)">
-      <i class='bx bxs-doughnut-chart min-w-60 flex justify-center'></i>
-      <span class="text">Reservations</span>
-    </a>
-  </li>
-  <li [class.active]="activeIndex === 4" class="flex items-center border-radius-48 font-16 text-dark bg-light h-12">
-    <a routerLink="/users" (click)="setActiveIndex(4)">
-      <i class='bx bxs-doughnut-chart min-w-60 flex justify-center'></i>
-      <span class="text">Users</span>
-    </a>
-  </li>
-  <li [class.active]="activeIndex === 5" class="flex items-center border-radius-48 font-16 text-dark bg-light h-12">
-    <a routerLink="/failures" (click)="setActiveIndex(5)">
-      <i class='bx bxs-doughnut-chart min-w-60 flex justify-center'></i>
-      <span class="text">Failures</span>
-    </a>
-  </li>
-</ul>
- 
+
+    <li [class.active]="activeIndex === 3" class="flex items-center border-radius-48 font-16 text-dark bg-light h-12">
+      <a (click)="setActiveIndex(3)" routerLink="/reservations">
+        <i class='bx bxs-doughnut-chart min-w-60 flex justify-center'></i>
+        <span class="text">Reservations</span>
+      </a>
+    </li>
+    <li [class.active]="activeIndex === 4" class="flex items-center border-radius-48 font-16 text-dark bg-light h-12">
+      <a (click)="setActiveIndex(4)" routerLink="/users">
+        <i class='bx bxs-doughnut-chart min-w-60 flex justify-center'></i>
+        <span class="text">Users</span>
+      </a>
+    </li>
+    <li [class.active]="activeIndex === 5" class="flex items-center border-radius-48 font-16 text-dark bg-light h-12">
+      <a (click)="setActiveIndex(5)" routerLink="/failures">
+        <i class='bx bxs-doughnut-chart min-w-60 flex justify-center'></i>
+        <span class="text">Failures</span>
+      </a>
+    </li>
+  </ul>
+
   <ul class="side-menu">
     <li [class.active]="activeIndex === 6">
-      <a routerLink="/logout" (click)="setActiveIndex(6)" class="flex items-center border-radius-48 font-16 text-red bg-light h-12">
+      <a (click)="setActiveIndex(6)" class="flex items-center border-radius-48 font-16 text-red bg-light h-12"
+         routerLink="/logout">
         <i class='bx bxs-log-out-circle min-w-60 flex justify-center'></i>
         <span class="text">Logout</span>
       </a>
     </li>
   </ul>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!--<section id="sidebar" class="fixed top-0 left-0 w-60 h-full bg-light dark:bg-grey transition duration-300">
@@ -148,4 +112,3 @@
   </ul>
 </section>-->
 
-   

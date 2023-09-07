@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,14 +7,23 @@ import { Component } from '@angular/core';
 })
 
 
-export class NavbarComponent {
-  showMenu = false;
-  toggleNavbar(){
-    this.showMenu = !this.showMenu;
-  }
-  activeTab: string = 'Accueil'; // Onglet actif par défaut
+export class NavbarComponent implements OnInit {
 
-  setActiveTab(tab: string) {
-    this.activeTab = tab;
+  actions: Array<any> = [
+    {title: "Home", route: "/member/home", icon: 'assets/images/orange.png'},
+    {title: "Reservation", route: "/member/reservation", icon: 'assets/images/orange.png'},
+    {title: "Projects", route: "/member/project", icon: 'assets/images/orange.png'},
+    {title: "Equipment", route: "/member/equipments", icon: 'assets/images/orange.png'}
+  ];
+
+  currentAction: any;
+
+  ngOnInit() {
+    this.currentAction = this.actions[0];
+  }
+
+  setCurrentAction(action: any) {
+    this.currentAction = action;
+
   }
 }
