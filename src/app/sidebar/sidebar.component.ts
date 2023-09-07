@@ -1,19 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent implements OnInit {
-  activeIndex: number = 0; // Initialisation de l'index actif
+export class SidebarComponent {
 
-  setActiveIndex(index: number): void {
-    this.activeIndex = index; // Met à jour l'index actif lorsque cliqué
-  }
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 }
