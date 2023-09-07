@@ -12,6 +12,7 @@ import { EquipmentCardComponent } from './equipment-card/equipment-card.componen
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { NewReservationPageComponent } from './new-reservation-page/new-reservation-page.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     ProjectCardComponent,
     NewReservationPageComponent,
     SidebarComponent,
+    AdminnavbarComponent,
   ],
   imports: [
     BrowserModule,
