@@ -6,6 +6,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { MemberComponent } from './member/member.component';
 import { FailuresComponent } from './failures/failures.component';
+import { CardsInfoComponent } from './cards-info/cards-info.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent }, // Route par défaut pour le composant Main
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'edit-profile', component: EditProfileComponent },
   { path: 'member', component: MemberComponent },
   { path: 'failures', component: FailuresComponent },
+  { path: 'cards-info', component: CardsInfoComponent },
 
   // Ajoutez d'autres routes ici si nécessaire
 ];
