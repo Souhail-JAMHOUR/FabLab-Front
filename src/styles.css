@@ -2,3 +2,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.xng-breadcrumb-root {
+  padding: 8px 16px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+
+.xng-breadcrumb-separator {
+  padding: 0 4px;
+}
+
+.xng-breadcrumb-trail {
+  color: orange;
+}
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

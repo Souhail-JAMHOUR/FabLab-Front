@@ -15,7 +15,13 @@ import {MemberTemplateComponent} from './member-template/member-template.compone
 import {MemberReservationComponent} from './member-reservation/member-reservation.component';
 import {SidebarComponent} from './sidebar/sidebar.component';
 import {AdminnavbarComponent} from './adminnavbar/adminnavbar.component';
-
+import {BreadcrumbModule} from "xng-breadcrumb";
+import {BreadcrumbsComponent} from './breadcrumbs/breadcrumbs.component';
+import {CarouselComponent} from './carousel/carousel.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CardComponent} from './card/card.component';
+import {AdminTemplateComponent} from './admin-template/admin-template.component';
+import {InlineSVGModule} from "ng-inline-svg-2";
 
 @NgModule({
   declarations: [
@@ -31,11 +37,18 @@ import {AdminnavbarComponent} from './adminnavbar/adminnavbar.component';
     MemberReservationComponent,
     SidebarComponent,
     AdminnavbarComponent,
+    BreadcrumbsComponent,
+    CarouselComponent,
+    CardComponent,
+    AdminTemplateComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BreadcrumbModule,
+    BrowserAnimationsModule,
+    InlineSVGModule
   ],
   providers: [],
   bootstrap: [AppComponent]
