@@ -20,7 +20,7 @@
         <li *ngFor="let action of sideBarActions" class=" pb-3">
           <a (click)="setCurrentAction(action)"
              [class]="action==currentAction?'relative bg-[#EEEEEE] w-[100%] flex items-center text-[#FF7900] hover:text-[#FF7900] p-3 rounded-tl-[1rem] rounded-bl-[1rem]':'relative pb-2 flex items-center text-white  hover:text-[#FF7900] p-2 rounded-lg'"
-             routerLink="{{action.route}}" >
+              routerLink="{{action.route}}" >
                
             <span class="ml-3">{{action.title}}</span>
           </a>

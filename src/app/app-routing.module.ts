@@ -7,6 +7,8 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { MemberComponent } from './member/member.component';
 import { FailuresComponent } from './failures/failures.component';
 import { CardsInfoComponent } from './cards-info/cards-info.component';
+import { SignInComponent } from './signin/signin.component';
+import { SignUpComponent } from './signup/signup.component';
 
 
 const routes: Routes = [
@@ -18,6 +20,9 @@ const routes: Routes = [
   { path: 'member', component: MemberComponent },
   { path: 'failures', component: FailuresComponent },
   { path: 'cards-info', component: CardsInfoComponent },
+  { path: 'signin', component: SignInComponent },
+  { path: 'signup', component: SignUpComponent },
+  
 
   // Ajoutez d'autres routes ici si nécessaire
 ];

@@ -16,6 +16,8 @@ import { MemberComponent } from './member/member.component';
 import { AdminComponent } from './admin/admin.component';
 import { FailuresComponent } from './failures/failures.component';
 import { ComfirmFailuresComponent } from './comfirm-failures/comfirm-failures.component';
+import { SignInComponent } from './signin/signin.component';
+import { SignUpComponent } from './signup/signup.component';
 
 
 
@@ -35,6 +37,8 @@ import { ComfirmFailuresComponent } from './comfirm-failures/comfirm-failures.co
     AdminComponent,
     FailuresComponent,
     ComfirmFailuresComponent,
+    SignInComponent,
+    SignUpComponent,
 
   
   ],
