@@ -22,6 +22,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CardComponent} from './card/card.component';
 import {AdminTemplateComponent} from './admin-template/admin-template.component';
 import {InlineSVGModule} from "ng-inline-svg-2";
+import { CardsInfoComponent } from './cards-info/cards-info.component';
+import { ComfirmFailuresComponent } from './comfirm-failures/comfirm-failures.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { FailuresComponent } from './failures/failures.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { SignInComponent } from './signin/signin.component';
+import { SignUpComponent } from './signup/signup.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +50,15 @@ import {InlineSVGModule} from "ng-inline-svg-2";
     CarouselComponent,
     CardComponent,
     AdminTemplateComponent,
+    CardsInfoComponent,
+    ComfirmFailuresComponent,
+    DashboardComponent,
+    EditProfileComponent,
+    FailuresComponent,
+    ProjectsComponent,
+    SignInComponent,
+    SignUpComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
