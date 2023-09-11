@@ -15,9 +15,12 @@
       <ul class="text-white space-x-2 pt-14 flex">
         <li *ngFor="let action of actions">
           <div class="px-3 pt-1">
+
             <a (click)="setCurrentAction(action)"
-               [class]="action==currentAction?'bg-orange-500 pb-4 px-3 pt-1 flex justify-center items-center text-black font-bold':'text-white text-sm font-semibold hover:text-orange-500'"
-               routerLink="{{action.route}}">{{action.title}}</a>
+               [class]="action==currentAction?'bg-orange-500 pb-4 px-3 pt-1 flex justify-center items-center text-black font-bold':'text-white flex justify-center items-center text-sm font-semibold hover:text-orange-500'"
+               routerLink="{{action.route}}">
+              <div [inlineSVG]="action.icon" aria-label="My icon" class="mr-2"></div>
+              {{action.title}}</a>
           </div>
         </li>
       </ul>
