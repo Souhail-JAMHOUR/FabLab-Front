@@ -143,8 +143,7 @@
                 <textarea formControlName="description"
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="exampleFormControlTextarea1" rows="4" placeholder="Description"></textarea>
-                <div *ngIf="myForm?.get('description')?.hasError('required')" class="text-red-500 text-xs mt-1">Start
-                  Date is required</div>
+                <div *ngIf="myForm?.get('description')?.hasError('required')" class="text-red-500 text-xs mt-1">Description is required</div>
               </div>
             </div>
           </form>

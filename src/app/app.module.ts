@@ -20,7 +20,8 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { ReservationlistAdminComponent } from './reservationlist-admin/reservationlist-admin.component';
-import { ReservationdetailsComponent } from './reservationdetails/reservationdetails.component'; // Import MatStepperModule
+import { ReservationdetailsComponent } from './reservationdetails/reservationdetails.component';
+import { DeleteModalComponent } from './delete-modal/delete-modal.component'; // Import MatStepperModule
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { ReservationdetailsComponent } from './reservationdetails/reservationdet
     SearchbarComponent,
     ReservationlistAdminComponent,
     ReservationdetailsComponent,
+    DeleteModalComponent,
   ],
   imports: [
     BrowserModule,

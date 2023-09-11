@@ -25,4 +25,9 @@ export class ReservationlistAdminComponent implements OnInit {
     });
   }
 
+  showModal = false;
+  toggleModal(){
+    this.showModal = !this.showModal;
+  }
+
 }
