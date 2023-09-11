@@ -18,7 +18,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { AdminnavbarComponent } from './adminnavbar/adminnavbar.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SearchbarComponent } from './searchbar/searchbar.component'; // Import MatStepperModule
+import { SearchbarComponent } from './searchbar/searchbar.component';
+import { ReservationlistAdminComponent } from './reservationlist-admin/reservationlist-admin.component';
+import { ReservationdetailsComponent } from './reservationdetails/reservationdetails.component'; // Import MatStepperModule
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { SearchbarComponent } from './searchbar/searchbar.component'; // Import 
     SidebarComponent,
     AdminnavbarComponent,
     SearchbarComponent,
+    ReservationlistAdminComponent,
+    ReservationdetailsComponent,
   ],
   imports: [
     BrowserModule,
