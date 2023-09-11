@@ -1,24 +1,106 @@
 <div class="p-4 bg-[#EEEEEE] h-auto sm:ml-64">
 
-     <!-- Breadcrump -->
+    <!-- Breadcrump -->
 
-  <nav class="flex items-center">
-    <ol class="inline-flex items-center space-x-1 ">
-      <li class="inline-flex items-center">
-        <a href="#" class="inline-flex items-center  font-bold text-black hover:underline">
-          Reservations
-        </a>
-      </li>
-      <li aria-current="page">
-        <div class="flex items-center">
-          <svg class="w-3 h-3 text-gray-400 mx-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="m1 9 4-4-4-4" />
-          </svg>
-          <span class="ml-1  font-bold text-[#FF7900] ">Reservation details</span>
+    <nav class="flex items-center">
+        <ol class="inline-flex items-center space-x-1 ">
+            <li class="inline-flex items-center">
+                <a href="#" class="inline-flex items-center  font-bold text-black hover:underline">
+                    Reservations
+                </a>
+            </li>
+            <li aria-current="page">
+                <div class="flex items-center">
+                    <svg class="w-3 h-3 text-gray-400 mx-1" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 9 4-4-4-4" />
+                    </svg>
+                    <span class="ml-1  font-bold text-[#FF7900] ">Reservation details</span>
+                </div>
+            </li>
+        </ol>
+    </nav>
+
+    <!-- Reservation details -->
+
+    <div class="mx-4 my-6">
+        <div class="flex space-x-6">
+            <div class="font-bold text-3xl">Reservation <span>#23545</span></div>
+            <div class="bg-red-500 font-medium p-2 mr-2 text-white">
+                Rejected
+            </div>
         </div>
-      </li>
-    </ol>
-  </nav>
+        <div class="mx-3 space-y-4 mt-8">
+            <div class="flex">
+                <div class="font-medium text-gray-600 mr-2">Reserved by : </div>
+                <span class="font-bold ">Souhail Jamhour</span>
+            </div>
+            <div class="flex">
+                <div class="font-medium text-gray-600 mr-2">The desired period: </div>
+                <span class="font-medium ">
+                    from
+                    <span class="font-extrabold text-[#FF7900]">12/07/2023</span>
+                    to
+                    <span class="text-[#FF7900] font-extrabold">17/07/2023</span>
+                </span>
+            </div>
+            <div class=" h-[250px]  grid">
+                <div class="px-4  font-semibold text-gray-800 mr-6 flex justify-between">
+                    <div>Equipments</div>
+                    <div>Quantity</div>
+                </div>
+                <ul class="mt-3 overflow-y-auto grid w-full gap-6 md:grid-cols-1">
 
+                    <li *ngFor="let equipment of reservationdetailsData">
+                        <div
+                            class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200  dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                            <div class=" items-center w-full justify-between flex">
+                                <div class="w-full text-lg font-semibold">{{equipment.name}}</div>
+                                <div>
+                                    <!-- <label for="Quantity"> Quantity </label> -->
+
+                                    <div>
+                                        <div class="flex items-center border bg-[#FF7900] ">
+                                            <div id="Quantity"
+                                                class="flex items-center justify-center h-10 w-16 border-transparent text-center text-black font-bold  sm:text-sm ">
+                                                {{equipment.quantity}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex space-x-3">
+                <!-- <button type="button"
+                    class="focus:outline-none text-white bg-[#32C832] hover:bg-[#0A6E31]  font-medium text-sm px-5 py-2.5  mb-2 ">Accept</button>
+                <button type="button"
+                    class="focus:outline-none text-white bg-[#CD3C14] hover:bg-red-800  font-medium text-sm px-5 py-2.5 mr-2 mb-2 ">Reject</button>
+                <button type="button"
+                    class="focus:outline-none text-black bg-[#FF7900] hover:bg-[#F16E00]  font-medium text-sm px-5 py-2.5 mr-2 mb-2 ">Cancel</button> -->
+                <button type="button"
+                    class="focus:outline-none text-white bg-black hover:bg-gray-900  font-medium 
+                    text-sm px-5 py-2.5 mr-2 mb-2 ">Delete</button>
+            </div>
+        </div>
+
+        <!-- <div [ngClass]="{
+                                'bg-red-500': Reservation.status === 'rejected',
+                                'bg-blue-500 ': Reservation.status === 'in progress',
+                                'bg-green-500 ': Reservation.status === 'confirmed',
+                                'bg-yellow-500 ': Reservation.status === 'on hold',
+
+                            }" class=" font-medium p-2 mr-2">
+                            <div [ngClass]="{
+                                'text-white': Reservation.status === 'in progress' || Reservation.status === 'rejected',
+                                'text-black': Reservation.status === 'on hold' || Reservation.status === 'confirmed'
+                            }"
+                            >
+                                {{ Reservation.status }}
+                            </div>
+                        </div> -->
+    </div>
 </div>

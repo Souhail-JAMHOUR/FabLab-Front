@@ -121,7 +121,7 @@
                         <a href="#" class="font-medium text-gray-800 ">{{Reservation.endDate}}</a>
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#" class="font-medium text-[#FF7900] hover:underline">Details</a>
+                        <a [routerLink]="['/reservation', Reservation.id]" class="font-medium text-[#FF7900] hover:underline">Details</a>
                     </td>
                 </tr>
                 
