@@ -1,0 +1,16 @@
+<div *ngFor="let Project of projectcardsData">
+    <div class="hover:shadow-lg bg-white m-4 my-h w-72">
+        <div class="relative max-w-xs h-52 overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init data-te-ripple-color="light">
+            <img src="{{Project.imageURL}}" class="h-full w-full" alt="...">
+        </div>
+        <div class="p-4">
+            <h5 class="text-xl text-[#FF7900] font-bold mb-2">{{Project.title}}</h5>
+            <div class="flex mb-1">
+                <p class="mr-1  font-semibold">Group name :</p>
+                <p class="">{{Project.group}}</p>
+            </div>
+            <p class=" text-gray-600">{{Project.description}}</p>
+            <a href="#" class="mt-4 inline-block px-4 py-2 bg-orange-500 text-white ">More details</a>
+        </div>
+    </div>
+</div>
