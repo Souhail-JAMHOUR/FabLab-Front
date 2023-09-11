@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,14 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
-  activeIndex: number = 0; // Initialisation de l'index actif
+  sideBarActions: Array<any> = [
+    {title: "Dashboard", route: "/dashboard", icon: 'assets/images/ic_Home.svg'},
+    {title: "Projects", route: "/projects", icon: 'assets/images/ic_File_Copy.svg'},
+    {title: "Equipment", route: "/equipments", icon: 'assets/images/ic_Hammer.svg'},
+    {title: "Reservation", route: "/reservation", icon: 'assets/images/ic_Calendar_month.svg'},
+    {title: "Users", route: "/users", icon: 'assets/images/ic_Collective_class_training Copy.svg'},
+    {title: "Failures", route: "/failures", icon: 'assets/images/ic_Important.svg'},
+  ];
 
-  setActiveIndex(index: number): void {
-    this.activeIndex = index; // Met à jour l'index actif lorsque cliqué
+  currentAction: any;
+
+  ngOnInit() {
+    this.currentAction = this.sideBarActions[0];
   }
 
-  constructor() { }
+  setCurrentAction(action: any) {
+    this.currentAction = action;
 
-  ngOnInit(): void {
   }
 }

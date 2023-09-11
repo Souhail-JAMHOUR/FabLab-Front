@@ -8,6 +8,7 @@ import { MemberComponent } from './member/member.component';
 import { FailuresComponent } from './failures/failures.component';
 import { CardsInfoComponent } from './cards-info/cards-info.component';
 
+
 const routes: Routes = [
   { path: '', component: DashboardComponent }, // Route par défaut pour le composant Main
   { path: 'users', component: UsersComponent }, // Route pour le composant Failures

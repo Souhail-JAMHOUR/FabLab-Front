@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./failures.component.css']
 })
 export class FailuresComponent {
+  showConfirm = false;
+
+  // Fonction pour afficher le composant comfirm-failures
+  showConfirmFailures() {
+    this.showConfirm = true;
+  }
 
 }

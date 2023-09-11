@@ -1,28 +1,40 @@
-<!-- navbar.component.html -->
-<section id="content">
-  <nav>
-   <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 9 14" role="img" aria-label="Left arrow"><path d=""/></svg>
-   
-   <form action="#">
-     <div class="form-input">
-       <input type="search" placeholder="Search...">
-       <button type="button" class="search-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4149 19.6652L15.9992 14.2495C16.9077 12.9799 17.395 11.4573 17.3924 9.89615C17.3924 5.75615 14.0362 2.39999 9.89618 2.39999C5.75614 2.39999 2.40002 5.75611 2.40002 9.89615C2.40002 14.0362 5.75614 17.3923 9.89618 17.3923C11.4574 17.3948 12.9801 16.9075 14.2498 15.9991L19.6652 21.4146C19.8998 21.648 20.2789 21.648 20.5134 21.4146L21.4149 20.5134C21.648 20.2787 21.648 19.8999 21.4149 19.6652ZM9.89618 14.9936C7.08098 14.9936 4.7988 12.7114 4.7988 9.89615C4.7988 7.08095 7.08098 4.79877 9.89618 4.79877C12.7114 4.79877 14.9936 7.08095 14.9936 9.89615C14.9936 12.7114 12.7114 14.9936 9.89618 14.9936Z" fill="black"/>
-        </svg></button>
-     </div>
-   </form>
-   <a href="#" class="notification">
-     <i class="'bx bxs-bell'" >
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 0 24 24" fill="none">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7944 3.29494C13.2298 3.10345 12.626 3 12.0002 3C9.15366 3 6.76235 5.14032 6.44801 7.96942L6.19621 10.2356L6.18975 10.2933C6.0608 11.417 5.69505 12.5005 5.11661 13.4725L5.08682 13.5222L4.50879 14.4856C3.98423 15.3599 3.72196 15.797 3.77858 16.1559C3.81625 16.3946 3.93914 16.6117 4.1245 16.7668C4.40307 17 4.91285 17 5.9324 17H18.0679C19.0875 17 19.5973 17 19.8758 16.7668C20.0612 16.6117 20.1841 16.3946 20.2218 16.1559C20.2784 15.797 20.0161 15.3599 19.4915 14.4856L18.9135 13.5222L18.8837 13.4725C18.4275 12.7059 18.1036 11.8698 17.9238 10.9994C15.1976 10.9586 13.0002 8.73592 13.0002 6C13.0002 5.00331 13.2918 4.07473 13.7944 3.29494ZM16.2742 4.98883C16.1 5.28551 16.0002 5.63109 16.0002 6C16.0002 6.94979 16.6622 7.74494 17.55 7.94914C17.4206 6.82135 16.961 5.80382 16.2742 4.98883Z" fill="white"/>
-        <path d="M9 17C9 17.394 9.0776 17.7841 9.22836 18.1481C9.37913 18.512 9.6001 18.8427 9.87868 19.1213C10.1573 19.3999 10.488 19.6209 10.8519 19.7716C11.2159 19.9224 11.606 20 12 20C12.394 20 12.7841 19.9224 13.1481 19.7716C13.512 19.6209 13.8427 19.3999 14.1213 19.1213C14.3999 18.8427 14.6209 18.512 14.7716 18.1481C14.9224 17.7841 15 17.394 15 17L12 17H9Z" fill="white"/>
-        <circle cx="18" cy="6" r="2.5" fill="#FF7900" stroke="#FF7900"/>
+<div class="p-4 bg-[#EEEEEE] space-x-96 flex sm:ml-64">
+
+  <form class="flex items-center w-[500px]">
+    <div class="relative ml-14 w-full">
+      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <svg aria-hidden="true" class="w-4 h-4" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" stroke="#999999" stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"/>
         </svg>
-     </i>
-     <span class="num">8</span>
-   </a>
-   <a href="#" class="profile"> 
-   <img src="assets/image/photo.png"> 
-   </a>
- </nav>
- </section>
+      </div>
+      <input
+        class="bg-gray-50 border border-gray-300 text-[#FF7900] text-sm  focus:ring-[#FF7900] focus:border-[#FF7900] block w-full pl-10 p-2.5  "
+        id="simple-search"
+        placeholder="Search ..."
+        required type="text">
+    </div>
+  </form>
+
+  <div class="flex space-x-2">
+    <button
+      class="text-white relative  bg-white focus:ring-[#FFF6B6] focus:ring-4 focus:outline-none font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2"
+      type="button">
+      <svg fill="none" height="22" viewBox="0 0 18 22" width="18" xmlns="http://www.w3.org/2000/svg">
+        <path clip-rule="evenodd"
+              d="M9.00001 21.2C9.63664 21.2001 10.2472 20.9473 10.6975 20.4972C11.1477 20.0471 11.4007 19.4366 11.4008 18.8H6.59919C6.5993 19.4366 6.8523 20.0471 7.30254 20.4972C7.75278 20.9473 8.36338 21.2001 9.00001 21.2ZM17.4576 17.2913L16.2 15.2V9.24801C16.2 5.90001 13.9004 3.04471 10.8006 2.232V2.00001C10.797 1.00813 9.99191 0.205963 9.00002 0.205963C8.00813 0.205963 7.20303 1.00813 7.19941 2.00001V2.22722C4.09299 3.02654 1.80001 5.84515 1.80001 9.20001V15.2L0.542408 17.2913C0.431187 17.4767 0.428288 17.7076 0.534818 17.8957C0.641348 18.0838 0.840836 18.2001 1.05702 18.2H16.943C17.1592 18.2001 17.3587 18.0838 17.4652 17.8957C17.5717 17.7076 17.5688 17.4767 17.4576 17.2913Z"
+              fill="black"
+              fill-rule="evenodd"/>
+      </svg>
+      <div class="absolute w-4 h-4 bg-[#CD3C14] rounded-full -top-1 -right-1 "></div>
+
+    </button>
+
+    <img alt="Rounded avatar"
+         class="w-10 h-10 rounded-full"
+         src="assets/image/photo.png">
+  </div>
+
+
+</div>

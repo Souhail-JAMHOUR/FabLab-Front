@@ -15,6 +15,7 @@ import { CardsInfoComponent } from './cards-info/cards-info.component';
 import { MemberComponent } from './member/member.component';
 import { AdminComponent } from './admin/admin.component';
 import { FailuresComponent } from './failures/failures.component';
+import { ComfirmFailuresComponent } from './comfirm-failures/comfirm-failures.component';
 
 
 
@@ -33,6 +34,7 @@ import { FailuresComponent } from './failures/failures.component';
     MemberComponent,
     AdminComponent,
     FailuresComponent,
+    ComfirmFailuresComponent,
 
   
   ],
