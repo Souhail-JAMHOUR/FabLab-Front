@@ -10,12 +10,23 @@ export class AuthService {
   }
 
 
-  public login(username: string, password: string) {
-    let options = {
-      headers: new HttpHeaders().set("Content-Type", "application/x-www-form-urlencoded")
-    }
-    let params = new HttpParams().set("password", password).set("username", username);
-    return this.http.post("http://localhost:8080/v1/auth/signin", params, options);
-  }
+    async login(username : string, password : string){
+
+        let user:any= await firstValueFrom(this.http.get("http://localhost:8089/users/"+username));
+        //console.log(password);
+        //console.log(user.password);
+        //console.log(atob(user.password));
+        if(password==atob(user.password)){
+            let decodedJwt:any = jwtDecode(user.token);
+            this.appState.setAuthState({
+                isAuthenticated : true,
+                username : decodedJwt.sub,
+                roles : decodedJwt.roles,
+                token : user.token
+            });
+            return Promise.resolve(true);
+        } else {
+            return Promise.reject("Bad credentials");
+        }
 
 }
