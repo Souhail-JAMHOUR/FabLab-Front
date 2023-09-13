@@ -22,6 +22,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CardComponent} from './card/card.component';
 import {AdminTemplateComponent} from './admin-template/admin-template.component';
 import {InlineSVGModule} from "ng-inline-svg-2";
+import {AngularFireModule} from "@angular/fire/compat";
+import {AngularFireStorageModule} from "@angular/fire/compat/storage";
+import {environment} from "../environments/environment.development";
+import { UploadTryComponent } from './upload-try/upload-try.component';
+
 
 @NgModule({
   declarations: [
@@ -41,6 +46,7 @@ import {InlineSVGModule} from "ng-inline-svg-2";
     CarouselComponent,
     CardComponent,
     AdminTemplateComponent,
+    UploadTryComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +54,9 @@ import {InlineSVGModule} from "ng-inline-svg-2";
     HttpClientModule,
     BreadcrumbModule,
     BrowserAnimationsModule,
-    InlineSVGModule
+    InlineSVGModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
