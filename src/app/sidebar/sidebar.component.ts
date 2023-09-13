@@ -8,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
 export class SidebarComponent implements OnInit {
   sideBarActions: Array<any> = [
     {title: "Dashboard", route: "/admin/dashboard", icon: 'assets/images/ic_Home.svg'},
-    {title: "Projects", route: "/admin/project", icon: 'assets/images/ic_File_Copy.svg'},
+    {title: "Projects", route: "/admin/projects", icon: 'assets/images/ic_File_Copy.svg'},
     {title: "Equipment", route: "/admin/equipments", icon: 'assets/images/ic_Hammer.svg'},
     {title: "Reservation", route: "/admin/reservation", icon: 'assets/images/ic_Calendar_month.svg'},
     {title: "Users", route: "/admin/users", icon: 'assets/images/ic_Collective_class_training Copy.svg'},
