@@ -28,8 +28,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { FailuresComponent } from './failures/failures.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { SignInComponent } from './signin/signin.component';
-import { SignUpComponent } from './signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
 import { UsersComponent } from './users/users.component';
 
 @NgModule({
@@ -56,8 +56,8 @@ import { UsersComponent } from './users/users.component';
     EditProfileComponent,
     FailuresComponent,
     ProjectsComponent,
-    SignInComponent,
-    SignUpComponent,
+    SigninComponent,
+    SignupComponent,
     UsersComponent,
   ],
   imports: [

@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
-export class SignUpComponent {
+export class SignupComponent {
 signIn() {
 throw new Error('Method not implemented.');
 }
@@ -17,7 +17,7 @@ throw new Error('Method not implemented.');
   constructor(private router: Router) {}
 
   goToSignIn(): void {
-    this.router.navigate(['/signin']); // Naviguer vers la page de connexion
+    this.router.navigate(['/admin/signin']); // Naviguer vers la page de connexion
   }
   
 }
