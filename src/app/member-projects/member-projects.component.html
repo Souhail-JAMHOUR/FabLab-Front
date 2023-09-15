@@ -1,0 +1,131 @@
+<form class="flex items-center p-6 w-[500px] ml-96">
+ <div class="relative ml-15 w-full border border-black">
+   <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+     <svg aria-hidden="true" class="w-4 h-4" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+       <path d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" stroke="#999999" stroke-linecap="round"
+             stroke-linejoin="round"
+             stroke-width="2"/>
+     </svg>
+   </div>
+   <input
+     class="bg-gray-50 border text-black text-sm  focus:ring-[#FF7900] focus:border-[#FF7900] block w-full pl-10 p-2.5  "
+     id="simple-search"
+     placeholder="Search ..."
+     required type="text">
+ </div>
+</form>
+<body class="bg-gray-100">
+ <div class="max-w-3xl mx-auto p-6 ">
+   <div class="text-sm font-medium text-center text-black border-b-8 border-black dark:text-black dark:border-orange-500  ">
+     <ul class="flex text-center">
+       <li class="mr-2">
+         <a href="#" class="inline-block p-4 border-b-2  border-transparent  hover:text-black hover:border-orange dark:hover:text-black" x-on:click="showCard1 = !showCard1">All Projects</a>
+       </li>
+       <li class="mr-2">
+         <a href="#" class="inline-block p-4 bg-orange-500 text-black border-b-2 border-orange-500  active dark:text-black dark:border-orange-500" aria-current="page" x-on:click="showCard2 = !showCard2">My Projects</a>
+       </li>
+       <li class="mr-2">
+         <a href="#" class="inline-block p-4 border-b-2 border-transparent  hover:text-black hover:border-orange dark:hover:text-black" x-on:click="showCard3 = !showCard3">Submissions</a>
+       </li>
+     </ul>
+   </div>
+   <div class="flex justify-end">
+    <button class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b dark:border-white/40 whitespace-nowrap shadow-transparent">
+      <span class="text-black bg-white focus:bg-orange-500 border border-black px-4 text-xs py-2 inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-black mx-6">Add Project</span>
+    </button>
+  </div>
+   <div class="p-6 grid grid-cols-4 gap-4">
+    
+     <div class="card border border-black"> <!-- Ajout de la classe 'border' pour la bordure -->
+       <img src="assets/images/project.png" class="card-img-top" alt="Image de la carte">
+       <div class="card-body mx-2">
+         <h5 class="card-title">Titre de la carte</h5>
+         <p class="card-text mb-3">Nom d'equipe</p>
+         <!-- Remplacement du bouton par le code HTML fourni -->
+         <td class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b dark:border-white/40 whitespace-nowrap shadow-transparent">
+           <span class="bg-black from-emerald-500 to-teal-400 px-3 text-xs py-1 inline-block whitespace-nowrap text-center align-baseline  uppercase leading-none text-white mx-20">See</span>
+         </td>
+       </div>
+     </div>
+     
+     <div class="card border border-black"> <!-- Ajout de la classe 'border' pour la bordure -->
+       <img src="assets/images/project.png" class="card-img-top" alt="Image de la carte">
+       <div class="card-body mx-2">
+         <h5 class="card-title">Titre de la carte</h5>
+         <p class="card-text mb-3">Nom d'equipe</p>
+         <!-- Remplacement du bouton par le code HTML fourni -->
+         <td class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b dark:border-white/40 whitespace-nowrap shadow-transparent">
+           <span class="bg-black from-emerald-500 to-teal-400 px-3 text-xs py-1 inline-block whitespace-nowrap text-center align-baseline  uppercase leading-none text-white mx-20">See</span>
+         </td>
+       </div>
+     </div>
+     <div class="card border border-black"> <!-- Ajout de la classe 'border' pour la bordure -->
+       <img src="assets/images/project.png" class="card-img-top" alt="Image de la carte">
+       <div class="card-body mx-2">
+         <h5 class="card-title">Titre de la carte</h5>
+         <p class="card-text mb-3">Nom d'equipe</p>
+         <!-- Remplacement du bouton par le code HTML fourni -->
+         <td class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b dark:border-white/40 whitespace-nowrap shadow-transparent">
+           <span class="bg-black from-emerald-500 to-teal-400 px-3 text-xs py-1 inline-block whitespace-nowrap text-center align-baseline  uppercase leading-none text-white mx-20">See</span>
+         </td>
+       </div>
+     </div>
+     <div class="card border border-black"> <!-- Ajout de la classe 'border' pour la bordure -->
+       <img src="assets/images/project.png" class="card-img-top" alt="Image de la carte">
+       <div class="card-body mx-2">
+         <h5 class="card-title">Titre de la carte</h5>
+         <p class="card-text mb-3">Nom d'equipe</p>
+         <!-- Remplacement du bouton par le code HTML fourni -->
+         <td class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b dark:border-white/40 whitespace-nowrap shadow-transparent">
+           <span class="bg-black from-emerald-500 to-teal-400 px-3 text-xs py-1 inline-block whitespace-nowrap text-center align-baseline  uppercase leading-none text-white mx-20">See</span>
+         </td>
+       </div>
+     </div>
+     <div class="card border border-black"> <!-- Ajout de la classe 'border' pour la bordure -->
+       <img src="assets/images/project.png" class="card-img-top" alt="Image de la carte">
+       <div class="card-body mx-2">
+         <h5 class="card-title">Titre de la carte</h5>
+         <p class="card-text mb-3">Nom d'equipe</p>
+         <!-- Remplacement du bouton par le code HTML fourni -->
+         <td class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b dark:border-white/40 whitespace-nowrap shadow-transparent">
+           <span class="bg-black from-emerald-500 to-teal-400 px-3 text-xs py-1 inline-block whitespace-nowrap text-center align-baseline  uppercase leading-none text-white mx-20">See</span>
+         </td>
+       </div>
+     </div>
+     <div class="card border border-black"> <!-- Ajout de la classe 'border' pour la bordure -->
+       <img src="assets/images/project.png" class="card-img-top" alt="Image de la carte">
+       <div class="card-body mx-2">
+         <h5 class="card-title">Titre de la carte</h5>
+         <p class="card-text mb-3">Nom d'equipe</p>
+         <!-- Remplacement du bouton par le code HTML fourni -->
+         <td class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b dark:border-white/40 whitespace-nowrap shadow-transparent">
+           <span class="bg-black from-emerald-500 to-teal-400 px-3 text-xs py-1 inline-block whitespace-nowrap text-center align-baseline  uppercase leading-none text-white mx-20">See</span>
+         </td>
+       </div>
+     </div>
+     <div class="card border border-black"> <!-- Ajout de la classe 'border' pour la bordure -->
+       <img src="assets/images/project.png" class="card-img-top" alt="Image de la carte">
+       <div class="card-body mx-2">
+         <h5 class="card-title">Titre de la carte</h5>
+         <p class="card-text mb-3">Nom d'equipe</p>
+         <!-- Remplacement du bouton par le code HTML fourni -->
+         <td class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b dark:border-white/40 whitespace-nowrap shadow-transparent">
+           <span class="bg-black from-emerald-500 to-teal-400 px-3 text-xs py-1 inline-block whitespace-nowrap text-center align-baseline  uppercase leading-none text-white mx-20">See</span>
+         </td>
+       </div>
+     </div>
+     <div class="card border border-black"> <!-- Ajout de la classe 'border' pour la bordure -->
+       <img src="assets/images/project.png" class="card-img-top" alt="Image de la carte">
+       <div class="card-body mx-2">
+         <h5 class="card-title">Titre de la carte</h5>
+         <p class="card-text mb-3">Nom d'equipe</p>
+         <!-- Remplacement du bouton par le code HTML fourni -->
+         <td class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b dark:border-white/40 whitespace-nowrap shadow-transparent">
+           <span class="bg-black from-emerald-500 to-teal-400 px-3 text-xs py-1 inline-block whitespace-nowrap text-center align-baseline  uppercase leading-none text-white mx-20">See</span>
+         </td>
+       </div>
+     </div>
+     <!-- Répétez la structure similaire pour les autres cartes -->
+   </div>
+ </div>
+</body>

@@ -1,0 +1,46 @@
+
+
+   <!-- Formulaire centré -->
+   <div class="max-w-xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+     <h2 class="text-2xl font-semibold mb-6">Ajouter un nouveau projet</h2>
+     <form action="votre_action.php" method="POST" enctype="multipart/form-data">
+      <div class="mb-6">
+       <label for="image" class="block text-gray-700 font-medium">Télécharger une photo</label>
+       <input type="file" name="image" id="image" accept="image/*" class="border border-gray-300 p-2 w-full" required>
+     </div>
+ 
+     <!-- Champ pour le nom du projet -->
+     <div class="mb-6">
+       <label for="name" class="block text-gray-700 font-medium">Nom du projet</label>
+       <input type="text" name="name" id="name" class="border border-gray-300 p-2 w-full" required>
+     </div>
+ 
+     <!-- Champ pour le nom de l'équipe -->
+     <div class="mb-6">
+       <label for="team" class="block text-gray-700 font-medium">Nom de l'équipe</label>
+       <input type="text" name="team" id="team" class="border border-gray-300 p-2 w-full" required>
+     </div>
+ 
+     <!-- Champ pour la description -->
+     <div class="mb-6">
+       <label for="description" class="block text-gray-700 font-medium">Description du projet</label>
+       <textarea name="description" id="description" rows="4" class="border border-gray-300 p-2 w-full" required></textarea>
+     </div>
+ 
+     <!-- Champ de téléchargement du rapport -->
+     <div class="mb-6">
+      <button type="button" class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b dark:border-white/40 whitespace-nowrap shadow-transparent" (click)="rapportInput.click()">
+       <span class="text-black bg-black focus:bg-black border border-black px-4 text-xs py-2 inline-block whitespace-nowrap text-center align-baseline uppercase leading-none text-white">Add Rapport</span>
+     </button>
+     <input type="file" #rapportInput accept=".pdf" style="display: none;" (change)="onFileChange($event)" required>
+     </div>
+
+       <!-- Bouton de soumission du formulaire -->
+       <div class="text-center">
+        <button class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b dark:border-white/40 whitespace-nowrap shadow-transparent">
+         <span class="text-black bg-orange-500 focus:bg-orange-500 border border-black px-4 text-xs py-2 inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-black mx-6">Submit</span>
+       </button>
+       </div>
+     </form>
+   </div>
+

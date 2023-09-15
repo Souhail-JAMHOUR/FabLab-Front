@@ -12,6 +12,8 @@ import { FailuresComponent } from './failures/failures.component';
 import { CardsInfoComponent } from './cards-info/cards-info.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
+import { MemberProjectsComponent } from './member-projects/member-projects.component';
+import { ProjectsInfoComponent } from './projects-info/projects-info.component';
 
 
 
@@ -21,6 +23,8 @@ const routes: Routes = [
     path: "member", component: MemberTemplateComponent, children: [
       {path: "home", component: HomepageComponent},
       {path: "reservation", component: MemberReservationComponent},
+      {path: "member-projects", component: MemberProjectsComponent},
+      {path: "projects-info", component: ProjectsInfoComponent},
     ]
   },
   {
