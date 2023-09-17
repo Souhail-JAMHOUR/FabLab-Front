@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'FabLab-Front';
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
+  status: boolean = true; // Par défaut, la barre latérale est visible
+
+  toggleSidebar() {
+    this.status = !this.status; // Inverser le statut de la barre latérale
+  }
 }

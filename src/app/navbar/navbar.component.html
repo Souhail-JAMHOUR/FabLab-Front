@@ -1,0 +1,42 @@
+<nav class="bg-black shadow sticky top-0 z-50">
+  <div class="container mx-auto w-full h-24 px-4">
+    <div class="justify-between flex">
+      <div class="flex ml-44 items-center">
+        <a (click)="setCurrentAction(actions.at(0))" routerLink="/member/home">
+          <img class="myw myh" src="assets/images/orange.png">
+        </a>
+
+        <div class=" ml-2">
+          <p class="text-white font-bold m0 text-xl">FabLab</p>
+          <p class="text-white font-bold m0 text-xl">Solidaire</p>
+        </div>
+      </div>
+
+      <ul class="text-white space-x-2 pt-14 flex">
+        <li *ngFor="let action of actions">
+          <div class="px-3 pt-1">
+
+            <a (click)="setCurrentAction(action)"
+               [class]="action==currentAction?'bg-orange-500 pb-4 px-3 pt-1 flex justify-center items-center text-black font-bold':'text-white flex justify-center items-center text-sm font-semibold hover:text-orange-500'"
+               routerLink="{{action.route}}">
+              <div [inlineSVG]="action.icon" aria-label="My icon" class="mr-2"></div>
+              {{action.title}}</a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="mr-4 flex items-center">
+        <div class="flex items-center">
+          <div class="relative w-10 h-10 overflow-hidden bg-orange-100 rounded-full dark:bg-orange-600">
+            <svg class="absolute w-12 h-12 text-orange-400 -left-1" fill="currentColor" viewBox="0 0 20 20"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path clip-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" fill-rule="evenodd">
+              </path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-orange-500 w-full h-2"></div>
+</nav>
