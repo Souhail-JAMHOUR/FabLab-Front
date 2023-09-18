@@ -31,6 +31,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SignInComponent } from './signin/signin.component';
 import { SignUpComponent } from './signup/signup.component';
 import { UsersComponent } from './users/users.component';
+import { EquipmentsComponent } from './equipments/equipments.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { UsersComponent } from './users/users.component';
     SignInComponent,
     SignUpComponent,
     UsersComponent,
+    EquipmentsComponent,
   ],
   imports: [
     BrowserModule,
