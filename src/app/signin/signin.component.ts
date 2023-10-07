@@ -3,6 +3,7 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {AuthService} from "../services/auth.service";
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {AppStateService} from "../services/app-state.service";
 
 @Component({
     selector: 'app-signin',
@@ -11,8 +12,9 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 })
 export class SignInComponent implements OnInit {
     formLogin!: FormGroup;
+    errorMessage = undefined;
 
-    constructor(private router: Router, private authService: AuthService, private fb: FormBuilder) {
+    constructor(private router: Router, private authService: AuthService, private fb: FormBuilder, private appState: AppStateService) {
     }
 
     ngOnInit(): void {
@@ -32,14 +34,23 @@ export class SignInComponent implements OnInit {
     }
 
     signIn() {
-        let username = this.formLogin.value.username;
-        let password = this.formLogin.value.password;
-        this.authService.login(username, password).then(resp => {
-            this.router.navigateByUrl("/admin");
+        let username = this.formLogin.value.username
+        let password = this.formLogin.value.password
+
+        this.authService.login(username, password).subscribe({
+            next: data => {
+                this.authService.loadProfile(data);
+                if (this.appState.authState.roles == "MEMBER") {
+                    this.router.navigateByUrl("/member")
+                } else {
+                    this.router.navigateByUrl("/admin")
+                }
+            },
+            error: err => {
+                console.log(err)
+
+            }
         })
-            .catch(error => {
-                this.errorMessage = error;
-            })
 
     }
 }

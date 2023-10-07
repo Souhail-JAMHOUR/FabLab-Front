@@ -8,7 +8,6 @@ import {DashboardComponent} from './dashboard/dashboard.component'; // Importez 
 import {UsersComponent} from './users/users.component'; // Importez le composant FailuresComponent
 import {ProjectsComponent} from './projects/projects.component';
 import {EditProfileComponent} from './edit-profile/edit-profile.component';
-
 import {FailuresComponent} from './failures/failures.component';
 import {CardsInfoComponent} from './cards-info/cards-info.component';
 import {SignInComponent} from './signin/signin.component';

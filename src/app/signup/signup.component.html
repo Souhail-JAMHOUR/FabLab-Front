@@ -1,70 +1,97 @@
 <main>
- <div class="box">
-   <div class="inner-box">
-     <div class="forms-wrap">
-      <form (submit)="signUp()">
-         <div class="logo">
-           <img src="assets/images/logo.png" alt="easyclass" />
-           <h4>FabLab Solidaire</h4>
-         </div>
+  <div class="box">
+    <div class="inner-box">
+      <div class="forms-wrap">
+        <form (ngSubmit)="signUp()" [formGroup]="formSignup">
+          <div class="logo">
+            <img alt="easyclass" src="assets/images/logo.png"/>
+            <h4>FabLab Solidaire</h4>
+          </div>
 
-         <div class="heading">
-           <h2>Get Started</h2>
-           <h6>Already have an account?</h6>
-           <a routerLink="/signin" class="toggle">Sign in</a>
-         </div>
+          <div class="heading">
+            <h2>Get Started</h2>
+            <h6>Already have an account?</h6>
+            <a class="toggle" routerLink="/signin">Sign in</a>
+          </div>
 
-         <div class="actual-form">
-           <div class="input-wrap">
-             <input
-               type="text"
-               placeholder="Name"
-               minlength="4"
-               class="input-field"
-               autocomplete="off"
-               required
-             />
-             
-           </div>
+          <div class="actual-form">
+            <div class="input-wrap">
+              <input
+                autocomplete="off"
+                class="input-field"
+                minlength="4"
+                placeholder="Name"
+                required
+                type="text"
+              />
 
-           <div class="input-wrap">
-             <input
-               type="email"
-               placeholder="Email"
-               class="input-field"
-               autocomplete="off"
-               required
-             />
-            
-           </div>
+            </div>
 
-           <div class="input-wrap">
-             <input
-               type="password"
-               placeholder="Password"
-               minlength="4"
-               class="input-field"
-               autocomplete="off"
-               required
-             />
-            
-           </div>
+            <div class="input-wrap">
+              <input
+                autocomplete="off"
+                class="input-field"
+                formControlName="email"
+                placeholder="Email"
+                required
+                type="email"
+              />
 
-           <input type="submit" value="Sign Up" class="sign-btn" />
+            </div>
 
-           <p class="text">
-             By signing up, I agree to the
-             <a href="#">Terms of Services</a> and
-             <a href="#">Privacy Policy</a>
-           </p>
-         </div>
-       </form>
-     </div>
-     <div class="carousel">
-      <div class="images-wrapper">
-        <img src="./assets/images/image1.png" class="image img-1 show" alt="" />
+            <div class="input-wrap">
+              <input
+                autocomplete="off"
+                class="input-field"
+                formControlName="username"
+                placeholder="Username"
+                required
+                type="text"
+              />
+
+            </div>
+
+            <div class="input-wrap">
+              <input
+                autocomplete="off"
+                class="input-field"
+                formControlName="password"
+                minlength="8"
+                placeholder="Password"
+                required
+                type="password"
+              />
+
+            </div>
+
+            <div class="input-wrap">
+              <input
+                autocomplete="off"
+                class="input-field"
+                formControlName="confirmedPassword"
+                minlength="8"
+                placeholder="Confirm Password"
+                required
+                type="password"
+              />
+
+            </div>
+
+            <input class="sign-btn" type="submit" value="Sign Up"/>
+
+            <p class="text">
+              By signing up, I agree to the
+              <a href="#">Terms of Services</a> and
+              <a href="#">Privacy Policy</a>
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="carousel">
+        <div class="images-wrapper">
+          <img alt="" class="image img-1 show" src="./assets/images/image1.png"/>
+        </div>
       </div>
     </div>
-   </div>
- </div>
+  </div>
 </main>
