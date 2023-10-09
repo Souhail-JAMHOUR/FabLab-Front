@@ -1,0 +1,177 @@
+<div class="p-4 bg-[#EEEEEE] h-auto sm:ml-64">
+    <!-- Breadcrump -->
+
+    <nav class="flex items-center">
+        <div class="flex items-center">
+            <span class="ml-1  font-bold text-[#FF7900] ">Reservations</span>
+        </div>
+    </nav>
+
+    <!-- Filter Buttons -->
+
+    <div class="flex ml-7 mt-7 space-x-4">
+        <button (click)="setFilter('all')" class="bg-[#595959] focus:opacity-100 opacity-60 text-white text-sm font-bold py-2 px-4 ">
+            All
+        </button>
+        <button (click)="setFilter('confirmed')"
+            class="bg-[#32C832] focus:opacity-100 opacity-60 text-black hover:bg-[#348034] text-sm font-bold py-2 px-4 ">
+            Confirmed
+        </button>
+        <button (click)="setFilter('on hold')" class="bg-[#FFCC00] focus:opacity-100 opacity-60  text-sm text-black font-bold py-2 px-4 ">
+            On hold
+        </button>
+        <button (click)="setFilter('rejected')" class="bg-[#CD3C14] focus:opacity-100 opacity-60  text-sm text-white font-bold py-2 px-4 ">
+            Rejected
+        </button>
+        <button (click)="setFilter('in progress')" class="bg-[#527EDB] focus:opacity-100 opacity-60 text-sm text-white font-bold py-2 px-4 ">
+            In progress
+        </button>
+    </div>
+
+
+    <!-- tables -->
+
+
+    <div class="relative my-4 overflow-x-auto shadow-md sm:rounded-lg">
+        <div class="flex items-center justify-between pb-4 p-4 bg-white dark:bg-gray-900">
+            <button  (click)="toggleModal()"
+                class="inline-flex items-center text-red-600 bg-white border border-red-600 hover:bg-gray-100 focus:bg-red-600 focus:text-white  font-medium text-sm px-3 py-1.5">
+                Delete
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                </svg>
+            </button>
+        </div>
+
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="p-4">
+                        <div class="flex items-center">
+                            <input id="checkbox-all-search" type="checkbox"
+                                class="w-4 h-4 text-[#FF7900] bg-gray-100 border-gray-300 rounded focus:ring-[#FF7900] focus:bg-[#FF7900]   ">
+                        </div>
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Reservation
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Reserved by
+                    </th>
+                    <th scope="col" class="justify-center flex px-6 py-3">
+                        Statut
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Start Date
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        End Date
+                    </th>
+                    <th scope="col" class=" flex justify-center px-6 py-3">
+                        ...
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody *ngFor="let Reservation of reservationData">
+                <tr [ngClass]="{
+                    'hidden': (filterStatus === 'confirmed' && Reservation.status !== 'confirmed') ||
+                              (filterStatus === 'on hold' && Reservation.status !== 'on hold') ||
+                              (filterStatus === 'rejected' && Reservation.status !== 'rejected') ||
+                              (filterStatus === 'in progress' && Reservation.status !== 'in progress')
+                }"
+                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                    <td class="w-4 p-4">
+                        <div class="flex items-center">
+                            <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4   bg-gray-100 border-gray-300 accent-red-500 ">
+                        </div>
+                    </td>
+                    <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                        <div class="pl-3">
+                            <div class="text-base font-semibold">{{Reservation.title}}</div>
+                        </div>
+                    </th>
+                    <td class="px-6 py-4">
+                        {{Reservation.reservedBy}}
+                    </td>
+                    <td class="px-6 py-4">
+                        <div class="flex justify-center items-center">
+                            <div [ngClass]="{
+                                'bg-red-500': Reservation.status === 'rejected',
+                                'bg-blue-500 ': Reservation.status === 'in progress',
+                                'bg-green-500 ': Reservation.status === 'confirmed',
+                                'bg-yellow-500 ': Reservation.status === 'on hold',
+
+                            }" class=" font-medium p-2 mr-2">
+                            <div [ngClass]="{
+                                'text-white': Reservation.status === 'in progress' || Reservation.status === 'rejected',
+                                'text-black': Reservation.status === 'on hold' || Reservation.status === 'confirmed'
+                            }">
+                                {{ Reservation.status }}
+                            </div>
+                        </div> 
+                        </div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <a href="#" class="font-medium text-gray-800">{{Reservation.startDate}}</a>
+                    </td>
+                    <td class="px-6 py-4">
+                        <a href="#" class="font-medium text-gray-800 ">{{Reservation.endDate}}</a>
+                    </td>
+                    <td class="px-6 py-4">
+                        <a [routerLink]="['/reservation', Reservation.id]" class="font-medium text-[#FF7900] hover:underline">Details</a>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Modal -->
+
+
+<div *ngIf="showModal" class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex">
+    <div class="relative flex items-center justify-center h-auto my-6 mx-auto max-w-6xl">
+      <!--content-->
+      <div class="border-0  shadow-lg relative flex flex-col w-2/5 bg-white outline-none focus:outline-none">
+        <!--header-->
+        <div class="flex items-start justify-between p-5 border-b border-solid border-slate-200 ">
+          <h3 class="text-2xl font-semibold">
+            Delete Item(s)
+          </h3>
+          <button class="p-1 ml-auto bg-transparent border-0 text-black  float-right text-3xl leading-none font-semibold flex  justify-center outline-none focus:outline-none" (click)="toggleModal()">
+            <span class="bg-transparent text-black  h-6 w-6 text-2xl block outline-none focus:outline-none">
+              x
+            </span>
+          </button>
+        </div>
+        <!--body-->
+        <div class="relative p-6 flex-auto">
+          <p class="my-4 text-slate-500 text-lg leading-relaxed">
+            Deleting this item will permanently remove the selected items from your records. This action cannot be undone. Are you sure you want to proceed?
+          </p>
+        </div>
+        <!--footer-->
+        <div class="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+          <button class="text-gray-800 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" (click)="toggleModal()">
+            Close
+          </button>
+          <button class="bg-[#CD3C14] text-white active:bg-[#CD3C14] font-bold uppercase text-sm px-6 py-3  shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" (click)="toggleModal()">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="showModal" class="opacity-25 fixed inset-0 z-40 bg-black"></div>

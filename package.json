@@ -27,6 +27,7 @@
     "script-loader": "^0.7.2",
     "tslib": "^2.3.0",
     "xng-breadcrumb": "^10.0.0",
+    "tw-elements": "^1.0.0-rc.1",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {

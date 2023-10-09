@@ -1,0 +1,39 @@
+[
+      {
+        "id": 1,
+        "name": "Laptop",
+        "quantity": 5,
+        "description": "Dell Latitude 15",
+        "available": true
+      },
+      {
+        "id": 2,
+        "name": "Projector",
+        "quantity": 2,
+        "description": "Epson PowerLite 1080p",
+        "available": false
+      },
+      {
+        "id": 3,
+        "name": "Microphone",
+        "quantity": 10,
+        "description": "Shure SM58",
+        "available": true
+      },
+      {
+        "id": 4,
+        "name": "Tablet",
+        "quantity": 8,
+        "description": "Apple iPad Pro",
+        "available": true
+      },
+      {
+        "id": 5,
+        "name": "Whiteboard",
+        "quantity": 3,
+        "description": "Interactive Whiteboard",
+        "available": false
+      }
+    ]
+
+  

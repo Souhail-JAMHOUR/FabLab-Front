@@ -1,0 +1,17 @@
+.circle-previous {
+    background-color: black;
+    color: white;
+  }
+  
+  .circle-current {
+    background-color: #FF7900;
+    color: white;
+  }
+  
+  .circle-next {
+    background-color: #999999;
+    color: black;
+  }
+
+
+  

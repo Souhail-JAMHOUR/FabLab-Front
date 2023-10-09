@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
@@ -36,50 +35,58 @@ import {SignInComponent} from './signin/signin.component';
 import {SignUpComponent} from './signup/signup.component';
 import {UsersComponent} from './users/users.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {SearchbarComponent} from "./searchbar/searchbar.component";
+import {ReservationlistAdminComponent} from "./reservationlist-admin/reservationlist-admin.component";
+import {ReservationdetailsComponent} from "./reservationdetails/reservationdetails.component";
+import {DeleteModalComponent} from "./delete-modal/delete-modal.component";
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        NavbarComponent,
-        HomepageComponent,
-        CopyNavbarComponent,
-        FooterComponent,
-        EquipmentCardComponent,
-        ProjectCardComponent,
-        NewReservationPageComponent,
-        MemberTemplateComponent,
-        MemberReservationComponent,
-        SidebarComponent,
-        AdminnavbarComponent,
-        BreadcrumbsComponent,
-        CarouselComponent,
-        CardComponent,
-        AdminTemplateComponent,
-        UploadTryComponent,
-        CardsInfoComponent,
-        ComfirmFailuresComponent,
-        DashboardComponent,
-        EditProfileComponent,
-        FailuresComponent,
-        ProjectsComponent,
-        SignInComponent,
-        SignUpComponent,
-        UsersComponent,
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        BreadcrumbModule,
-        BrowserAnimationsModule,
-        InlineSVGModule,
-        AngularFireModule.initializeApp(environment.firebaseConfig),
-        AngularFireStorageModule,
-        FormsModule,
-        ReactiveFormsModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HomepageComponent,
+    CopyNavbarComponent,
+    FooterComponent,
+    EquipmentCardComponent,
+    ProjectCardComponent,
+    NewReservationPageComponent,
+    MemberTemplateComponent,
+    MemberReservationComponent,
+    SidebarComponent,
+    AdminnavbarComponent,
+    BreadcrumbsComponent,
+    CarouselComponent,
+    CardComponent,
+    AdminTemplateComponent,
+    UploadTryComponent,
+    CardsInfoComponent,
+    ComfirmFailuresComponent,
+    DashboardComponent,
+    EditProfileComponent,
+    FailuresComponent,
+    ProjectsComponent,
+    SignInComponent,
+    SignUpComponent,
+    UsersComponent,
+    SearchbarComponent,
+    ReservationlistAdminComponent,
+    ReservationdetailsComponent,
+    DeleteModalComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BreadcrumbModule,
+    BrowserAnimationsModule,
+    InlineSVGModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

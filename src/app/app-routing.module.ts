@@ -12,6 +12,8 @@ import {FailuresComponent} from './failures/failures.component';
 import {CardsInfoComponent} from './cards-info/cards-info.component';
 import {SignInComponent} from './signin/signin.component';
 import {SignUpComponent} from './signup/signup.component';
+import {ReservationdetailsComponent} from "./reservationdetails/reservationdetails.component";
+import {NewReservationPageComponent} from "./new-reservation-page/new-reservation-page.component";
 
 
 const routes: Routes = [
@@ -21,19 +23,23 @@ const routes: Routes = [
   {
     path: "member", component: MemberTemplateComponent, children: [
       {path: "home", component: HomepageComponent},
-      {path: "reservation", component: MemberReservationComponent},
+      {path: 'new-reservation', component: NewReservationPageComponent},
+      {
+        path: "reservation", component: MemberReservationComponent, children: [
+          {path: 'reservation/:id', component: ReservationdetailsComponent},
+
+        ]
+      },
     ]
   },
   {
     path: "admin", component: AdminTemplateComponent, children: [
-      {path: 'users', component: UsersComponent}, // Route pour le composant Failures
+      {path: 'users', component: UsersComponent},
       {path: 'dashboard', component: DashboardComponent},
       {path: 'projects', component: ProjectsComponent},
       {path: 'edit-profile', component: EditProfileComponent},
       {path: 'failures', component: FailuresComponent},
       {path: 'cards-info', component: CardsInfoComponent},
-
-
     ]
   }
 ];

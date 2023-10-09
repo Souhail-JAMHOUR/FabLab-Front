@@ -1,5 +1,5 @@
-import { Component , OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import {Component} from '@angular/core';
+import {AppStateService} from "../services/app-state.service";
 
 
 @Component({
@@ -11,10 +11,10 @@ export class HomepageComponent {
 
   // cardsData: any;
 
-  constructor(private sanitizer: DomSanitizer) {}
+  FirstName: String = this.state.authState.username;
 
-  FirstName : String = "Ahmed";
-  SecondName : String = "Ben"
+  constructor(private state: AppStateService) {
+  }
 
 
   // ngOnInit(): void {
