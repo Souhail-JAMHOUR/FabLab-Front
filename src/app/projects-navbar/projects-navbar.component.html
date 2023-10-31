@@ -1,0 +1,33 @@
+
+<div class="px-5 mx-auto w-full h-80 px-12 ">
+<nav class="top-0 z-50  ">
+  <div class="container mx-auto w-full h-24 px-4 ">
+    <div class="px-36 justify-between flex  ">
+      <ul class="text-white space-x-2 pt-14 flex">
+        <li *ngFor="let action of actions">
+          <div class="px-20 pt-1">
+
+            <a (click)="setCurrentAction(action)"
+               [class]="action==currentAction?'bg-orange-500 pb-4 px-16 pt-1 flex justify-center  text-black font-bold':'text-black flex justify-center items-center text-2m  hover:text-orange-500'"
+               routerLink="{{action.route}}">
+
+              {{action.title}}</a>
+
+
+          </div>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+  <div class="bg-orange-500 w-full h-2"></div>
+</nav>
+  <div class="bg-white w-full h-full ">
+
+  <router-outlet class="absolute top-0 left-0 static" ></router-outlet>
+
+
+  </div>
+
+</div>

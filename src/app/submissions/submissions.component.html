@@ -1,0 +1,19 @@
+<div class="grid gap-4 grid-cols-4 bg-white   ">
+  <div *ngFor="let Project of projectcardsData" class=" ">
+    <div class="p-1 border border-black hover:shadow-lg bg-white m-4 ">
+      <div class=" max-w-xs overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init data-te-ripple-color="light">
+        <img src="{{Project.imageURL}}" class="h-40 w-64" alt="...">
+      </div>
+      <div class="">
+        <h5 class="text-xl text-[#000000] font-bold mb-2">{{Project.title}}</h5>
+        <div class="flex mb-1">
+          <p class="mr-1  font-semibold">Group name :</p>
+          <p class="">{{Project.group}}</p>
+        </div>
+        <!-- <p class=" text-gray-600">{{Project.description}}</p>-->
+
+        <button class="p-1  rounded-md bg-black text-white hover:text-orange-500 ">modify</button>
+      </div>
+    </div>
+  </div>
+</div>

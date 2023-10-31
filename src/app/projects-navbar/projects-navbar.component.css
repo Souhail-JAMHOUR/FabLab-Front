@@ -1,0 +1,21 @@
+.myw {
+  height: 50px;
+}
+
+.myh {
+  height: 50px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.m0{
+  margin-bottom: 0px !important;
+}
+
+.active {
+  color: #38b2ac; /* Couleur active */
+  font-weight: bold;
+}
+

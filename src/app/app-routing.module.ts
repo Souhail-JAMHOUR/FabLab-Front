@@ -13,6 +13,12 @@ import { FailuresComponent } from './failures/failures.component';
 import { CardsInfoComponent } from './cards-info/cards-info.component';
 import { SignInComponent } from './signin/signin.component';
 import { SignUpComponent } from './signup/signup.component';
+import {MemberProjectComponent} from "./member-project/member-project.component";
+import {AllprojectsComponent} from "./allprojects/allprojects.component";
+import {MyprojectsComponent} from "./myprojects/myprojects.component";
+import {SubmissionsComponent} from "./submissions/submissions.component";
+import {SeeprojectComponent} from "./seeproject/seeproject.component";
+import {AddnewprojectComponent} from "./addnewproject/addnewproject.component";
 
 
 
@@ -22,6 +28,22 @@ const routes: Routes = [
     path: "member", component: MemberTemplateComponent, children: [
       {path: "home", component: HomepageComponent},
       {path: "reservation", component: MemberReservationComponent},
+
+      {path: "project",component: MemberProjectComponent ,children:
+          [
+            {path: "allprojects", component: AllprojectsComponent,
+              children :[
+                {path : "projectdetailsx",component : SeeprojectComponent}]
+            },
+            {path: "myprojects", component: MyprojectsComponent,
+              children :[
+                {path : "addnewproject",component : AddnewprojectComponent}]
+
+            },
+            {path: "submissions",component: SubmissionsComponent},]
+
+      },
+
     ]
   },
   {
@@ -30,12 +52,12 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'edit-profile', component: EditProfileComponent },
-  
+
   { path: 'failures', component: FailuresComponent },
   { path: 'cards-info', component: CardsInfoComponent },
   { path: 'signin', component: SignInComponent },
   { path: 'signup', component: SignUpComponent },
-  
+
     ]
   }
 ];

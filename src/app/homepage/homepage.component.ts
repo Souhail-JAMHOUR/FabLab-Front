@@ -13,10 +13,9 @@ export class HomepageComponent {
 
   constructor(private sanitizer: DomSanitizer) {}
 
-  FirstName : String = "Ahmed";
-  SecondName : String = "Ben"
 
-
+  FirstName : String = "Meryem";
+  SecondName : String = ""
   // ngOnInit(): void {
   //   this.cardsService.getCardsData().subscribe(data => {
   //     this.cardsData = data;

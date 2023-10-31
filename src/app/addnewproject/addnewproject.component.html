@@ -1,0 +1,152 @@
+
+
+
+<div class=" fixed top-0 left-0 bg-black bg-opacity-50 w-full h-full w-screen h-screen" >
+
+
+  <div class="fixed bg-white w-[80%] h-[70%] top-1/4 left-32 rounded-sm  border-8 border-t-orange-500">
+
+
+    <p>addnewproject works!</p>
+
+    <body>
+
+    <div class=" mx-auto">
+      <div class="flex flex-wrap ">
+
+
+        <button type="button" (click)="hideProject()" class="fixed right-20 bg-white rounded-md p-2 inline-flex items-center justify-center text-orange-500 hover:text-black hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 border border-black">
+          <span class="sr-only">Close menu</span>
+          <!-- Heroicon name: outline/x -->
+          <svg class="h-2 w-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+
+
+
+        <div class="  bg-white">
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class="w-full max-w-full  ml-4  md:flex-0 bg-white border border-black ">
+          <div class=" min-w-0 bg-white ">
+
+
+            <!-- Titre, nom, icône à droite de l'image -->
+
+
+            <div class="flex-none w-auto max-w-full px-2 my-auto">
+              <div class="flex-none w-auto max-w-full px-20 my-auto">
+                <div class=" dark:bg-white flex flex-col justify-between">
+                  <!-- Titre -->
+
+                  <h5 class="py-6 px-10 text-2xl text-black font-bold mb-2">{{projectDetails.title}}</h5>
+                  <!--   <h5 class="text-xl text-black">FabLab</h5>-->
+                  <!-- Nom de l'équipe -->
+                  <div class="flex justify-between items-center">
+                    <p class="leading-normal font-bold dark:text-black text-sm"></p>
+                    <p class="leading-normal dark:text-black text-sm "></p>
+
+                    <!-- Image en haut -->
+                    <div class="flex-none w-auto">
+                      <div class="  justify-center text-white transition-all duration-200 ease-in-out text-base w-64">
+                        <!-- Image -->
+                        <img src="{{projectDetails.imageURL}}" alt="profile_image" class="w-full" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex  items-center">
+                    <p class="leading-normal font-bold dark:text-black text-sm">Réalisé par :</p>
+                    <p class="leading-normal dark:text-black text-sm p-4">{{projectDetails.memberId}}</p>
+                  </div>
+
+                  <div class="flex  items-center">
+                    <p class="leading-normal font-bold dark:text-black text-sm">Groupe :</p>
+                    <p class="leading-normal dark:text-black text-sm p-4">{{projectDetails.group}}</p>
+                  </div>
+
+                  <div class="flex items-center">
+                    <p class="leading-normal font-bold dark:text-black text-sm">Date :</p>
+                    <p class="leading-normal dark:text-black text-sm p-4">{{projectDetails.submissionDate}}</p>
+                  </div>
+
+                  <!-- Icône PDF -->
+                  <a href="#">
+                    <div class="flex justify-end items-center mr-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="41" viewBox="0 0 40 41" fill="none">
+                        <path d="M21.9526 5.125H15C11.8573 5.125 10.286 5.125 9.30965 6.12572C8.33334 7.12644 8.33334 8.73707 8.33334 11.9583V29.0417C8.33334 32.2629 8.33334 33.8736 9.30965 34.8743C10.286 35.875 11.8573 35.875 15 35.875H25C28.1427 35.875 29.714 35.875 30.6904 34.8743C31.6667 33.8736 31.6667 32.2629 31.6667 29.0417V15.0819C31.6667 14.3836 31.6667 14.0345 31.5398 13.7205C31.4129 13.4066 31.1721 13.1597 30.6904 12.6659L24.3096 6.12572C23.8279 5.63196 23.5871 5.38508 23.2808 5.25504C22.9745 5.125 22.6339 5.125 21.9526 5.125Z" stroke="#33363F" stroke-width="2"/>
+                        <path d="M15 22.2083L25 22.2083" stroke="#33363F" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M15 29.0417L21.6667 29.0417" stroke="#33363F" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M21.6667 5.125V11.9583C21.6667 13.569 21.6667 14.3743 22.1548 14.8746C22.643 15.375 23.4287 15.375 25 15.375H31.6667" stroke="#33363F" stroke-width="2"/>
+                      </svg>
+                      <p class="leading-normal dark:text-black text-sm pr-2">PDF</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Description en bas -->
+
+
+          <div class="p-2 dark:bg-white">
+
+            <h5 class="text-xl text-black font-bold mb-2">Descriptioin</h5>
+            <p class="dark:text-black">{{projectDetails.description}}</p>
+          </div>
+          <div class="p-2 dark:bg-white">
+            <h5 class="text-xl text-black font-bold mb-2">Outils</h5>
+            <div class="flex justify-between items-center -mt-4">
+              <p class="leading-normal dark:text-black text-sm">raspberry pi 4</p>
+              <p class="leading-normal dark:text-black text-sm p-6">MICROSD CARD ADAPTER</p>
+              <p class="leading-normal dark:text-black text-sm p-6"> MPU-9250</p>
+            </div>
+            <div class="flex justify-between items-center -mt-9">
+              <p class="leading-normal dark:text-black text-sm">raspberry pi 4</p>
+              <p class="leading-normal dark:text-black text-sm p-6">MICROSD CARD ADAPTER</p>
+              <p class="leading-normal dark:text-black text-sm p-6"> MPU-9250</p>
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+
+    </body>
+
+
+
+    <!--
+
+      <button class="px-3.5 py-1  rounded-md bg-black text-white hover:text-orange-500" (click)="hideProject()"  >hide</button>
+    -->
+
+
+
+  </div>
+
+
+
+</div>
+

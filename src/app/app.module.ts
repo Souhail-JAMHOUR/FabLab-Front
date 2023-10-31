@@ -31,6 +31,13 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SignInComponent } from './signin/signin.component';
 import { SignUpComponent } from './signup/signup.component';
 import { UsersComponent } from './users/users.component';
+import { MemberProjectComponent } from './member-project/member-project.component';
+import { ProjectsNavbarComponent } from './projects-navbar/projects-navbar.component';
+import { AllprojectsComponent } from './allprojects/allprojects.component';
+import { MyprojectsComponent } from './myprojects/myprojects.component';
+import { SubmissionsComponent } from './submissions/submissions.component';
+import { SeeprojectComponent } from './seeproject/seeproject.component';
+import { AddnewprojectComponent } from './addnewproject/addnewproject.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +66,13 @@ import { UsersComponent } from './users/users.component';
     SignInComponent,
     SignUpComponent,
     UsersComponent,
+    MemberProjectComponent,
+    ProjectsNavbarComponent,
+    AllprojectsComponent,
+    MyprojectsComponent,
+    SubmissionsComponent,
+    SeeprojectComponent,
+    AddnewprojectComponent,
   ],
   imports: [
     BrowserModule,
